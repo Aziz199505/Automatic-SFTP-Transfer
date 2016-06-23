@@ -1,0 +1,10 @@
+#!/bin/bash
+#YOU NEED TO DO SSH WITHOUT PASSWORD FIRST
+
+
+sftp -o "IdentityFile=/root/.ssh/id_rsa" root@172.16.111.128 <<EOF
+lcd /root/Desktop/
+get -r /var/www/html/*
+
+EOF
+
